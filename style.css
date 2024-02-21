@@ -1,84 +1,90 @@
-html{
-    font-family: monospace;
+html {
+  font-family: monospace;
+}
 
+body {
+  margin: 0 auto;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* justify-content: center;
-    align-items: center; */
-    width: 100%;
-    height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
 }
 
-header{
-    position: fixed;
-    top: 0;
-    left:0;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    width: 20vw;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 20vw;
 }
 
-header h1{
-    padding-left: 1em;
+header h1 {
+  padding-left: 1em;
 }
 
-li{
-    list-style: none;
-    font-size: 24px;
+li {
+  list-style: none;
+  font-size: 24px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-a:visited{
-    color:black;
+a:visited {
+  color: black;
 }
 
-a:hover{
-    color: blue;
+a:hover {
+  color: blue;
 }
 
-main{
-    right:0;
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;  
-    text-align:left;
-    width: 80vw;
+main {
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  text-align: left;
+  width: 80vw;
 }
 
-main p{
-    font-size: 2em;
-    padding-right: 5vw;
-    padding-left: 5vw;
-    color: black
-} 
+main p {
+  font-size: 2em;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  color: black;
+}
 
 .vanish span {
-    color: white;
-    transition: color 4s ease;
+  color: blue;
+  transition: color 4s ease;
 }
 
 .vanish span:hover {
-    color: blue;
-    transition-duration:0.2s;
+  color: white;
+  transition-duration: 0s;
 }
 
-   
-
-footer{
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    background-color: white;
+footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
 
+footer h3 {
+  color: white;
+  padding-left: 1em;
+  padding-right: 1em;
+}
