@@ -1,0 +1,161 @@
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* END CSS RESET */
+
+/*CHANGE HILIGHT STYLE*/
+::selection {
+  background-color: #d9ff41;
+  color: rgba(0, 0, 0, 0);
+}
+/* -------------- */
+
+/*CHANGE LINKS STYLE*/
+a {
+  text-decoration: none;
+  color: rgb(207, 207, 207);
+}
+
+a:visited {
+  color: rgb(207, 207, 207);
+}
+
+a:hover{
+  color: #d9ff41;
+}
+
+a:active{
+  color: #d9ff41;
+}
+
+/* -------------- */
+
+/* FULL PAGE STYLING */
+body {
+  color: rgb(207, 207, 207);
+  background-color: rgb(120, 120, 120);
+}
+
+.body-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER STYLING */
+header {
+  display: flex;
+}
+
+/* MAIN CONTENT STYLING */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  gap: 0px;
+}
+
+.left-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  position: fixed;
+  top: 40vh;
+}
+
+nav ul{
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.3vw;
+  text-align: right;
+  background-color: rgb(28, 0, 93);
+}
+
+.right-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.right-wrapper p {
+  font-size: 1.3vw;
+  text-align: justify;
+}
+
+.right-wrapper p span {
+  background-color: rgb(28, 0, 93);
+}
+
+/* .image-text {
+
+} */
+
+/* FOOTER STYLING */
+footer {
+  display: flex;
+}
+
+/* CUSTOM FX CLASSES */
+.vanish span {
+  transition: color 4s ease;
+}
+
+.vanish span:hover {
+  color: rgba(0, 0, 0, 0);
+  transition-duration: 0s;
+}
+
+/* FOR SMALL SCREENS */
+@media only screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .right-wrapper p {
+    font-size: 3vw;
+  }
+
+  nav ul{
+    font-size: 3vw;
+  }
+
+}
