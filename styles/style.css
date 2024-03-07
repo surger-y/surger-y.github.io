@@ -63,11 +63,25 @@ a:active{
 
 /* -------------- */
 
+/* ANIMATION FOR BREATHING BACKGROUND */
+@keyframes breathing-color--dark {
+  from
+  {
+      background-color: rgb(120, 120, 120);
+  }
+  to
+  {
+      background-color: rgb(80, 80, 80);
+  }
+}
+
 /* FULL PAGE STYLING */
 body {
   color: rgb(207, 207, 207);
-  background-color: rgb(120, 120, 120);
+  background-color:rgb(120, 120, 120) ;
+  animation: 3s infinite alternate ease-out breathing-color--dark;
 }
+
 
 .body-container {
   width: 100vw;
@@ -98,6 +112,7 @@ main {
 
 nav {
   position: fixed;
+  z-index: 1000;
   top: 40vh;
 }
 
@@ -125,9 +140,15 @@ nav ul{
   background-color: rgb(28, 0, 93);
 }
 
-/* .image-text {
+.image-text img {
+  transition: all 4s ease;
+}
 
-} */
+.image-text img:hover {
+  transition-duration: 7s;
+  filter: grayscale(1) contrast(3) brightness(0.2);
+}
+
 
 /* FOOTER STYLING */
 footer {
