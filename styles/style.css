@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 * {
+  cursor: crosshair;
   margin: 0;
 }
 body {
@@ -47,18 +48,18 @@ h6 {
 a {
   text-decoration: none;
   color: rgb(207, 207, 207);
-}
 
-a:visited {
-  color: rgb(207, 207, 207);
-}
+  &:visited {
+    color: rgb(207, 207, 207);
+  }
 
-a:hover{
-  color: #d9ff41;
-}
+  &:hover {
+    color: #d9ff41;
+  }
 
-a:active{
-  color: #d9ff41;
+  &:active {
+    color: #d9ff41;
+  }
 }
 
 /* -------------- */
@@ -107,7 +108,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  overflow-y: scroll;
+  text-align: justify;
+  height:100vh;
+}
+
+.left-wrapper p span {
+  color: rgb(28, 0, 93);
 }
 
 nav {
@@ -127,6 +134,8 @@ nav ul{
 .right-wrapper {
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  height:100vh;
   /* align-items: center;
   justify-content: center; */
 }
@@ -156,12 +165,16 @@ footer {
 }
 
 /* CUSTOM FX CLASSES */
-.vanish span {
-  transition: color 4s ease;
+.left-wrapper p .vanish span {
+  color: rgba(0, 0, 0, 0);
+  opacity: 0%;
+  transition: all .4s ease;
 }
 
-.vanish span:hover {
+.left-wrapper p .vanish span:hover {
   color: rgba(0, 0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
+  opacity: 100%;
   transition-duration: 0s;
 }
 
