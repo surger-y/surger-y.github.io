@@ -11,6 +11,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow: hidden;
 }
 img,
 picture,
@@ -83,6 +84,20 @@ body {
   animation: 3s infinite alternate ease-out breathing-color--dark;
 }
 
+nav {
+  position: fixed;
+  z-index: 1000;
+  top: 40vh;
+  left: 17vw;
+}
+
+nav ul{
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.3vw;
+  text-align: right;
+  background-color: rgb(28, 0, 93);
+}
 
 .body-container {
   width: 100vw;
@@ -108,27 +123,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: scroll;
+  overflow-y: clip;
   text-align: justify;
   height:100vh;
 }
 
 .left-wrapper p span {
-  color: rgb(28, 0, 93);
-}
-
-nav {
-  position: fixed;
-  z-index: 1000;
-  top: 40vh;
-}
-
-nav ul{
-  list-style: none;
-  padding-left: 0;
-  font-size: 1.3vw;
-  text-align: right;
-  background-color: rgb(28, 0, 93);
+  color: rgb(120, 120, 120) ;
 }
 
 .right-wrapper {
@@ -188,8 +189,30 @@ footer {
     font-size: 3vw;
   }
 
+  nav {
+
+    left: 33vw;
+  }
+
   nav ul{
     font-size: 3vw;
   }
 
 }
+
+
+
+/* TESTZONE */
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(58, 58, 58);
+  opacity: 1;
+  transition: opacity 10s;
+  z-index: 1001;
+}
+
