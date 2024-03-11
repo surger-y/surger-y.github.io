@@ -47,7 +47,6 @@ h6 {
 
 /*CHANGE LINKS STYLE*/
 a {
-  text-decoration: none;
   color: rgb(207, 207, 207);
 
   &:visited {
@@ -95,7 +94,7 @@ nav ul{
   list-style: none;
   padding-left: 0;
   font-size: 1.3vw;
-  text-align: right;
+  text-align: left;
   background-color: rgb(28, 0, 93);
 }
 
@@ -151,12 +150,13 @@ main {
 }
 
 .image-text img {
+  filter: grayscale(1) contrast(2) brightness(0.4);
   transition: all 4s ease;
 }
 
 .image-text img:hover {
   transition-duration: 7s;
-  filter: grayscale(1) contrast(3) brightness(0.2);
+  filter: none;
 }
 
 
@@ -181,9 +181,7 @@ footer {
 
 /* FOR SMALL SCREENS */
 @media only screen and (max-width: 600px) {
-  main {
-    grid-template-columns: 1fr;
-  }
+
 
   .right-wrapper p {
     font-size: 3vw;
@@ -204,15 +202,4 @@ footer {
 
 /* TESTZONE */
 
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(58, 58, 58);
-  opacity: 1;
-  transition: opacity 10s;
-  z-index: 1001;
-}
 

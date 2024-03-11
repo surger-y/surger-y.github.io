@@ -1,20 +1,4 @@
 
-document.addEventListener("DOMContentLoaded", function() {
-  var overlay = document.getElementById('overlay');
-  
-  // Set a transitionend event listener
-  overlay.addEventListener("transitionend", function(event) {
-    // Check if the opacity transition has ended
-    if (event.propertyName === 'opacity') {
-      // Remove the id attribute from the overlay
-      overlay.removeAttribute('id');
-    }
-  });
-  
-  // Trigger the fade-out effect by changing the opacity
-  overlay.style.opacity = 0;
-});
-
 // WRAPS EACH WORD IN "VANISH" CLASS ELEMENTS IN SPANS
 let vanish = document.querySelectorAll(".vanish");
 for (let i = 0; i < vanish.length; i++) {
