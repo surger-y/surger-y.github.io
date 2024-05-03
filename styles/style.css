@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 * {
-  cursor: crosshair;
   margin: 0;
 }
 body {
@@ -43,25 +42,6 @@ h6 {
   background-color: #d9ff41;
   color: rgba(0, 0, 0, 0);
 }
-/* -------------- */
-
-/*CHANGE LINKS STYLE*/
-a {
-  color: rgb(207, 207, 207);
-
-  &:visited {
-    color: rgb(207, 207, 207);
-  }
-
-  &:hover {
-    color: #d9ff41;
-  }
-
-  &:active {
-    color: #d9ff41;
-  }
-}
-
 /* -------------- */
 
 /* ANIMATION FOR BREATHING BACKGROUND */
@@ -119,44 +99,34 @@ main {
 }
 
 .left-wrapper {
+  padding: 1em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  overflow-y: clip;
+  align-items: left;
+  overflow-y: scroll;
   text-align: justify;
   height:100vh;
-}
-
-.left-wrapper p span {
-  color: rgb(120, 120, 120) ;
+  color: rgb(28,0,93);
 }
 
 .right-wrapper {
+  padding: 1em;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
   height:100vh;
-  /* align-items: center;
-  justify-content: center; */
 }
 
-.right-wrapper p {
-  font-size: 1.3vw;
-  text-align: justify;
+
+.image-box img:hover {
+  filter: grayscale(0.7);
+  cursor: pointer;
 }
 
-.right-wrapper p span {
-  background-color: rgb(28, 0, 93);
-}
-
-.image-text img {
-  filter: grayscale(1) contrast(2) brightness(0.4);
-  transition: all 4s ease;
-}
-
-.image-text img:hover {
-  transition-duration: 7s;
-  filter: none;
+hr {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: rgb(28, 0, 93); 
 }
 
 
@@ -165,19 +135,6 @@ footer {
   display: flex;
 }
 
-/* CUSTOM FX CLASSES */
-.left-wrapper p .vanish span {
-  color: rgba(0, 0, 0, 0);
-  opacity: 0%;
-  transition: all .4s ease;
-}
-
-.left-wrapper p .vanish span:hover {
-  color: rgba(0, 0, 0, 0);
-  /* background-color: rgb(0, 0, 0); */
-  opacity: 100%;
-  transition-duration: 0s;
-}
 
 /* FOR SMALL SCREENS */
 @media only screen and (max-width: 600px) {
@@ -202,4 +159,23 @@ footer {
 
 /* TESTZONE */
 
+ /* Hide scrollbar for Chrome, Safari and Opera */
+.left-wrapper::-webkit-scrollbar {
+  display: none;
+}
 
+/* Hide scrollbar for IE, Edge and Firefox */
+.left-wrapper {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} 
+
+.right-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.right-wrapper {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
