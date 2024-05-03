@@ -6,13 +6,13 @@ const rightSide = document.querySelector('.right-wrapper')
 const loadMainLeft = () => {
   fetch('https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/main-left.html')
     .then(response => response.text())
-    .then(result => leftSide.innerHtml = result)
+    .then(result => leftSide.innerHTML = result)
 }
 
 const loadMainRight = () => {
   fetch('https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/main-right.html')
     .then(response => response.text())
-    .then(result => rightSide.innerHtml = result)
+    .then(result => rightSide.innerHTML = result)
 }
 
 loadMainLeft();
