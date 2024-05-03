@@ -20,7 +20,7 @@ loadMainRight();
 
 backRight.addEventListener('mousedown', () => {
   loadMainRight()
-}
+})
 
 image.addEventListener('mousedown', () => {
   fetch('https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/blog/blog001.html')   
