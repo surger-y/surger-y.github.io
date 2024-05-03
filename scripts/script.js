@@ -1,4 +1,3 @@
-const image = document.querySelector('img')
 const backRight = document.querySelector('.backRight')
 const leftSide = document.querySelector('.left-wrapper')
 const rightSide = document.querySelector('.right-wrapper')
@@ -17,6 +16,7 @@ const loadMainRight = () => {
 
 loadMainLeft();
 loadMainRight();
+const image = document.querySelector('img')
 
 //backRight.addEventListener('mousedown', () => {
  // loadMainRight()
