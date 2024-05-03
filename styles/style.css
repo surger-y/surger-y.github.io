@@ -63,21 +63,6 @@ body {
   animation: 3s infinite alternate ease-out breathing-color--dark;
 }
 
-nav {
-  position: fixed;
-  z-index: 1000;
-  top: 40vh;
-  left: 17vw;
-}
-
-nav ul{
-  list-style: none;
-  padding-left: 0;
-  font-size: 1.3vw;
-  text-align: left;
-  background-color: rgb(28, 0, 93);
-}
-
 .body-container {
   width: 100vw;
   height: 100vh;
@@ -87,7 +72,20 @@ nav ul{
 
 /* HEADER STYLING */
 header {
+  background-color: transparent;
+  color: rgb(28,0,93);
   display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+header a {
+  padding-left: 1em;
+}
+
+header hr {
+  margin: 0;
+  padding: 0;
 }
 
 /* MAIN CONTENT STYLING */
@@ -99,7 +97,7 @@ main {
 }
 
 .left-wrapper {
-  padding: 1em;
+  padding: 1em 0.5em 1em 1em;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -110,16 +108,17 @@ main {
 }
 
 .right-wrapper {
-  padding: 1em;
+  padding: 1em 1em 1em 0.5em;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
   height:100vh;
+  color: rgb(28,0,93);
 }
 
 
 .image-box img:hover {
-  filter: grayscale(0.7);
+  filter: grayscale(1);
   cursor: pointer;
 }
 
