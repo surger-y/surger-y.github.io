@@ -129,6 +129,15 @@ hr {
   color: rgb(28, 0, 93); 
 }
 
+.returnToBlog {
+  background: none;
+	color: rgb(28,0,93);
+	border: 1px solid rgb(28,0,93);
+	padding: .2em; 
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
 /* FOOTER STYLING */
 footer {

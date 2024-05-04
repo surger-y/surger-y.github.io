@@ -1,32 +1,54 @@
-const backRight = document.querySelector('.backRight')
-const leftSide = document.querySelector('.left-wrapper')
-const rightSide = document.querySelector('.right-wrapper')
+//Initial page load
+const portfolio = document.querySelector('.left-wrapper');
+const blog = document.querySelector('.right-wrapper');
 
-const loadMainLeft = () => {
+const loadPortfolio = () => {
   fetch('https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/main-left.html')
     .then(response => response.text())
-    .then(result => leftSide.innerHTML = result)
-}
+    .then(result => portfolio.innerHTML = result);
+};
 
-const loadMainRight = () => {
+const loadBlog = () => {
   fetch('https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/main-right.html')
     .then(response => response.text())
-    .then(result => rightSide.innerHTML = result)
+    .then(result => blog.innerHTML = result);
+};
+
+if (portfolio && blog) {
+  loadPortfolio();
+  loadBlog();
 }
 
-loadMainLeft();
-loadMainRight();
-const image = document.querySelector('img')
 
-//backRight.addEventListener('mousedown', () => {
- // loadMainRight()
-//})
+//Listener for returning to blogfeed
+const addBlogReturnListener = () => {
+  const blogReturn = document.querySelector('.returnToBlog');
+  if (blogReturn) {
+    blogReturn.addEventListener('mousedown', () => {
+      loadBlog();
+    });
+  }
+};
 
-image.addEventListener('mousedown', () => {
-  fetch('https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/blog/blog001.html')   
-   .then(response => response.text())
-   .then(result => rightSide.innerText = result);
+const addImageListener = () => {
+  const image = document.querySelector('img');
+  if (image) {
+    image.addEventListener('mousedown', () => {
+      fetch('https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/blog/blog001.html')
+        .then(response => response.text())
+        .then(result => blog.innerHTML = result);
+    });
+  }
+};
 
-})
-
+//observer for changes in dom 
+const observer = new MutationObserver(mutationsList => {
+  for (let mutation of mutationsList) {
+    if (mutation.type === 'childList' && mutation.addedNodes.length) {
+      addImageListener();
+      addBlogReturnListener();
+    }
+  }
+});
+observer.observe(document.body, { childList: true, subtree: true });
 
