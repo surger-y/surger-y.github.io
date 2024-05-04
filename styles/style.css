@@ -125,6 +125,7 @@ main {
 hr {
   margin-top: 1em;
   margin-bottom: 1em;
+  border-style: solid;
   color: rgb(28, 0, 93); 
 }
 
@@ -137,21 +138,6 @@ footer {
 
 /* FOR SMALL SCREENS */
 @media only screen and (max-width: 600px) {
-
-
-  .right-wrapper p {
-    font-size: 3vw;
-  }
-
-  nav {
-
-    left: 33vw;
-  }
-
-  nav ul{
-    font-size: 3vw;
-  }
-
 }
 
 
