@@ -137,7 +137,7 @@ hr {
 
 button {
   background: none;
-	color: #fefefe;
+	color: rgb(28, 0, 93);
   border: 0px;
   font-size: 1em;
 	cursor: pointer;
@@ -146,15 +146,16 @@ button {
 
 /* FOOTER STYLING */
 footer {
+  border-top: 2px solid rgb(28,0,93);
   width: 100%;
   text-align: center;
-  background-color: rgb(28,0,93);
-  display: flex;
-  flex-direction: column;
-  position: fixed;
+  background-color:rgb(120, 120, 120) ;
+  animation: 3s infinite alternate ease-out breathing-color--dark;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: sticky;
   bottom: 0;
 }
-
 
 /* FOR SMALL SCREENS */
 @media only screen and (max-width: 600px) {
