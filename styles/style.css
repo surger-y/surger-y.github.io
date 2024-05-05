@@ -76,7 +76,7 @@ header {
   color: rgb(28,0,93);
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: start;
 }
 
 header a {
@@ -132,11 +132,13 @@ hr {
 .returnToBlog {
   background: none;
 	color: rgb(28,0,93);
-	border: 1px solid rgb(28,0,93);
+	border: 2px solid rgb(28,0,93);
 	padding: .2em; 
+  margin-top: 1em;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+  align-self: start;
 }
 
 /* FOOTER STYLING */
@@ -147,6 +149,9 @@ footer {
 
 /* FOR SMALL SCREENS */
 @media only screen and (max-width: 600px) {
+  .image-box img:hover {
+    filter: none;
+  }
 }
 
 
