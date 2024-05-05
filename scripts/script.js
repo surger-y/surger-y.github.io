@@ -49,7 +49,7 @@ const addImageListener = () => {
           .then(response => response.text())
           .then(result => blog.innerHTML = result);
       });
-    }
+    })
   }
 };
 
