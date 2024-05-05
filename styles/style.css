@@ -76,11 +76,7 @@ header {
   color: rgb(28,0,93);
   display: flex;
   flex-direction: column;
-  justify-content: start;
-}
-
-header a {
-  padding-left: 1em;
+  text-align: center;
 }
 
 header hr {
@@ -137,22 +133,26 @@ hr {
   color: rgb(28, 0, 93); 
 }
 
-.returnToBlog {
+
+
+button {
   background: none;
-	color: rgb(28,0,93);
-	border: 2px solid rgb(28,0,93);
-	padding: .2em; 
-  margin-top: 1em;
-  margin-bottom: 3em;
-	font: inherit;
+	color: #fefefe;
+  border: 0px;
+  font-size: 1em;
 	cursor: pointer;
 	outline: inherit;
-  align-self: start;
 }
 
 /* FOOTER STYLING */
 footer {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(28,0,93);
   display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
 }
 
 
