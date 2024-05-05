@@ -20,7 +20,7 @@ if (portfolio && blog) {
 }
 
 
-//Listener for returning to blogfeed
+//creates listener for returning to blog  feed
 const addBlogReturnListener = () => {
   const blogReturn = document.querySelector('.returnToBlog');
   if (blogReturn) {
@@ -30,14 +30,26 @@ const addBlogReturnListener = () => {
   }
 };
 
-const addImageListener = () => {
-  const image = document.querySelector('img');
-  if (image) {
-    image.addEventListener('mousedown', () => {
-      fetch('https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/blog/blog001.html')
-        .then(response => response.text())
-        .then(result => blog.innerHTML = result);
+//creates listener for returning to portfolio feed
+const addPortfolioReturnListener = () => {
+  const portfolioReturn = document.querySelector('.returnToPortfolio');
+  if (portfolioReturn) {
+    portfolioReturn.addEventListener('mousedown', () => {
+      loadPortfolio();
     });
+  }
+};
+
+const addImageListener = () => {
+  const thumbnails = document.querySelectorAll('.thumbnails');
+  if (thumbnails) {
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.addEventListener('mousedown', () => {
+        fetch(`https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/blog/blog${index}.html`)
+          .then(response => response.text())
+          .then(result => blog.innerHTML = result);
+      });
+    }
   }
 };
 
