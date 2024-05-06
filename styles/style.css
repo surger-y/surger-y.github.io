@@ -113,8 +113,9 @@ main {
   color: rgb(28,0,93);
 }
 
-.right-wrapper p {
-  margin-bottom: 1em;
+.blog-post p {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
 
 .image-box img:hover {
@@ -124,6 +125,16 @@ main {
 
 img {
   width: 100%;
+}
+
+figure {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: smaller;
 }
 
 hr {
