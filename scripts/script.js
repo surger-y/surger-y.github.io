@@ -40,7 +40,7 @@ const addPortfolioReturnListener = () => {
   }
 };
 
-const addImageListener = () => {
+const addBlogListener = () => {
   const thumbnails = document.querySelectorAll('.thumbnails');
   if (thumbnails) {
     thumbnails.forEach((thumbnail, index) => {
@@ -53,12 +53,28 @@ const addImageListener = () => {
   }
 };
 
+const addPortfolioListener = () => {
+  const works = document.querySelectorAll('.works');
+  if (works) {
+    works.forEach((work, index) => {
+      work.addEventListener('mousedown', () => {
+        fetch(`https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/portfolio/portfolio${index}.html`)
+          .then(response => response.text())
+          .then(result => portfolio.innerHTML = result);
+      });
+    })
+  }
+};
+
+
 //observer for changes in dom 
 const observer = new MutationObserver(mutationsList => {
   for (let mutation of mutationsList) {
     if (mutation.type === 'childList' && mutation.addedNodes.length) {
-      addImageListener();
+      addBlogListener();
       addBlogReturnListener();
+      addPortfolioListener();
+      addPortfolioReturnListener();
     }
   }
 });
