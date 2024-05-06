@@ -194,6 +194,9 @@ footer {
   .image-box img:hover {
     filter: none;
   }
+  .selected-works {
+    grid-template-columns: 1fr;
+  }
 }
 
 
