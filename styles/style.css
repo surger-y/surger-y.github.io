@@ -113,6 +113,14 @@ main {
   color: rgb(28,0,93);
 }
 
+ul {
+  list-style-type: none;
+}
+
+.open {
+  text-align: center;
+}
+
 .blog-post p {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
