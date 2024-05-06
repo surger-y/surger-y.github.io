@@ -121,6 +121,14 @@ ul {
   text-align: center;
 }
 
+.selected-works {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+  text-align: center;
+  width:100%;
+}
+
 .blog-post p {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
