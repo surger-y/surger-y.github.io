@@ -57,7 +57,7 @@ const addPortfolioListener = () => {
   const works = document.querySelectorAll('.works');
   if (works) {
     works.forEach((work, index) => {
-      work.addEventListener('mousedown', () => {
+      work.addEventListener('mouseup', () => {
         fetch(`https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/portfolio/portfolio${index}.html`)
           .then(response => response.text())
           .then(result => portfolio.innerHTML = result);

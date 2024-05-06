@@ -147,10 +147,11 @@ ul {
   text-decoration: underline;
 }
 .works:hover{
-  color: #d9ff41;
   cursor: pointer;
 }
-.works:
+.works:active{
+  color: #d9ff41;
+}
 
 img {
   border: 2px solid rgb(28, 0, 93);
