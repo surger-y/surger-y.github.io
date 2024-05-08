@@ -162,7 +162,9 @@ ul {
   margin-top: 0.5em;
 }
 
-
+.image-box {
+  padding: 0.5em;
+}
 
 .thumbnails {
   cursor: pointer;
