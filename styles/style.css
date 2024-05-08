@@ -233,6 +233,10 @@ footer {
   .selected-works {
     grid-template-columns: 1fr;
   }
+  .blog-feed {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 
