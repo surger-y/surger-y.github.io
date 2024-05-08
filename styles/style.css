@@ -138,6 +138,7 @@ main {
 
 .blog-feed {
   display: grid;
+  gap: 1em;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -153,7 +154,7 @@ ul {
 .selected-works {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0px;
+  gap: 1em;
   width:100%;
 }
 
@@ -163,7 +164,6 @@ ul {
 }
 
 .image-box {
-  padding: 0.5em;
 }
 
 .thumbnails {
@@ -234,7 +234,6 @@ footer {
     grid-template-columns: 1fr;
   }
   .blog-feed {
-    display: grid;
     grid-template-columns: 1fr;
   }
 }
