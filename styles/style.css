@@ -56,14 +56,40 @@ h6 {
   }
 }
 
-/* FULL PAGE STYLING */
-body {
-  color: rgb(207, 207, 207);
+/* COLOR PALETTE 1 - EINK */
+.color-eink {
+  color: black;
+}
+
+.background-eink {
+  background: white;
+}
+
+.image-eink{
+  filter: grayscale(1);
+}
+
+/* COLOR PALETTE 2 - EINK INVERTED */
+.invert{
+  filter: invert(1);
+}
+
+/*COLOR PALETTE 3 - BREATHING */
+.background-breathing {
   background-color:rgb(120, 120, 120) ;
   animation: 3s infinite alternate ease-out breathing-color--dark;
 }
 
+.color-breathing {
+   color: rgb(28, 0, 93);
+}
+
+/* FULL PAGE STYLING */
+body {
+}
+
 .body-container {
+  background-color: inherit;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -72,11 +98,10 @@ body {
 
 /* HEADER STYLING */
 header {
-  background-color: transparent;
-  color: rgb(28,0,93);
   display: flex;
   flex-direction: column;
   text-align: center;
+  background-color: inherit;
 }
 
 header hr {
@@ -100,7 +125,6 @@ main {
   overflow-y: scroll;
   text-align: justify;
   height:100vh;
-  color: rgb(28,0,93);
 }
 
 .right-wrapper {
@@ -110,11 +134,16 @@ main {
   overflow-y: scroll;
   text-align: justify;
   height:100vh;
-  color: rgb(28,0,93);
+}
+
+.blog-feed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 .open {
@@ -133,13 +162,10 @@ ul {
   margin-top: 0.5em;
 }
 
-.image-box img:hover {
-  filter: grayscale(1);
-  cursor: pointer;
-}
+
 
 .thumbnails {
-
+  cursor: pointer;
 }
 
 .works {
@@ -154,7 +180,7 @@ ul {
 }
 
 img {
-  border: 2px solid rgb(28, 0, 93);
+  border: 2px solid;
   width: 100%;
 }
 
@@ -172,40 +198,36 @@ hr {
   margin-top: 1em;
   margin-bottom: 1em;
   border-style: solid;
-  color: rgb(28, 0, 93); 
+  color: inherit;
 }
 
 nav {
-  border: 1px solid rgb(28, 0, 93);
+  border: 1px solid;
 }
 
 button {
   background: none;
-	color: rgb(28, 0, 93);
   border: 0px;
   font-size: 1em;
 	cursor: pointer;
 	outline: inherit;
+  color: inherit;
 }
 
 /* FOOTER STYLING */
 footer {
-  border-top: 1px solid rgb(28,0,93);
+  border-top: 1px solid;
   width: 100%;
   text-align: center;
-  background-color:rgb(120, 120, 120) ;
-  animation: 3s infinite alternate ease-out breathing-color--dark;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: sticky;
   bottom: 0;
+  background-color: inherit;
 }
 
 /* FOR SMALL SCREENS */
 @media only screen and (max-width: 600px) {
-  .image-box img:hover {
-    filter: none;
-  }
   .selected-works {
     grid-template-columns: 1fr;
   }
