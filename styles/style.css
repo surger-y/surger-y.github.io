@@ -216,6 +216,11 @@ button {
   color: inherit;
 }
 
+button:active {
+  background-color: black;
+  color: white;
+}
+
 /* FOOTER STYLING */
 footer {
   border-top: 1px solid;

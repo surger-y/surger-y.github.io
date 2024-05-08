@@ -24,7 +24,7 @@ if (portfolio && blog) {
 const addBlogReturnListener = () => {
   const blogReturn = document.querySelector('.returnToBlog');
   if (blogReturn) {
-    blogReturn.addEventListener('mousedown', () => {
+    blogReturn.addEventListener('mouseup', () => {
       loadBlog();
     });
   }
@@ -34,7 +34,7 @@ const addBlogReturnListener = () => {
 const addPortfolioReturnListener = () => {
   const portfolioReturn = document.querySelector('.returnToPortfolio');
   if (portfolioReturn) {
-    portfolioReturn.addEventListener('mousedown', () => {
+    portfolioReturn.addEventListener('mouseup', () => {
       loadPortfolio();
     });
   }
