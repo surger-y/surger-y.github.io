@@ -142,6 +142,10 @@ main {
   grid-template-columns: 1fr 1fr;
 }
 
+.logo {
+  border-color: transparent;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -161,8 +165,6 @@ ul {
 .blog-post p {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
-}
-
 .image-box {
 }
 
