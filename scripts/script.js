@@ -66,6 +66,19 @@ const addPortfolioListener = () => {
   }
 };
 
+const addNowListener = () => {
+  const nows = document.querySelectorAll('.now');
+  if (nows) {
+    nows.forEach((now, index) => {
+      now.addEventListener('mouseup', () => {
+        fetch(`https://raw.githubusercontent.com/surger-y/surger-y.github.io/main/pages/portfolio/nowreading${index}.html`)
+          .then(response => response.text())
+          .then(result => portfolio.innerHTML = result);
+      });
+    })
+  }
+};
+
 
 //observer for changes in dom 
 const observer = new MutationObserver(mutationsList => {
@@ -75,6 +88,7 @@ const observer = new MutationObserver(mutationsList => {
       addBlogReturnListener();
       addPortfolioListener();
       addPortfolioReturnListener();
+      addNowListener();
     }
   }
 });

@@ -190,6 +190,17 @@ ul {
   color: #d9ff41;
 }
 
+.now {
+  color: blue; 
+  text-decoration: underline;
+}
+.now:hover{
+  cursor: pointer;
+}
+.now:active{
+  color: #d9ff41;
+}
+
 img {
   border: 2px solid;
   width: 100%;
