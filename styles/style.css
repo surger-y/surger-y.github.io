@@ -39,7 +39,7 @@ h6 {
 
 /*CHANGE HILIGHT STYLE*/
 ::selection {
-  background-color: #d9ff41;
+  background-color: rgba(0,0,0,0);
   color: rgba(0, 0, 0, 0);
 }
 /* -------------- */
@@ -76,8 +76,7 @@ h6 {
 
 /*COLOR PALETTE 3 - BREATHING */
 .background-breathing {
-  background-color:rgb(120, 120, 120) ;
-  animation: 3s infinite alternate ease-out breathing-color--dark;
+  background-color:#e5e5e5 ;
 }
 
 .color-breathing {
@@ -86,6 +85,7 @@ h6 {
 
 /* FULL PAGE STYLING */
 body {
+  font-size: 2vw;
 }
 
 .empty-padding {
@@ -223,6 +223,10 @@ hr {
   color: inherit;
 }
 
+h2 {
+  font-size: 2.5vw;
+}
+
 nav {
   border: 1px solid;
 }
@@ -230,7 +234,7 @@ nav {
 button {
   background: none;
   border: 0px;
-  font-size: 1em;
+  font-size: 2vw;
 	cursor: pointer;
 	outline: inherit;
   color: inherit;
