@@ -259,6 +259,15 @@ footer {
 
 /* FOR SMALL SCREENS */
 @media only screen and (max-width: 600px) {
+  body{
+    font-size: 3vw;
+  }
+  button{
+    font-size: 3vw;
+  }
+  h2 {
+    font-size:3.5vw;
+  }
   .selected-works {
     grid-template-columns: 1fr;
   }
