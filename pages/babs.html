@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For B. Esperanza — nervous.works</title>
+<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+<link rel="stylesheet" href="../styles.css">
+<style>
+.piece { position: relative; }
+.piece-body .stanza { position: relative; margin-bottom: 28px; }
+
+.translation {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin-left: 32px;
+  width: 340px;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+}
+.stanza:hover .translation,
+.stanza:focus-within .translation { opacity: 1; }
+
+@media (max-width: 900px) {
+  .translation {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    width: auto;
+    margin: 8px 0 0 10vw;
+    display: none;
+  }
+  .stanza:hover .translation,
+  .stanza:focus-within .translation { display: block; }
+}
+</style>
+</head>
+<body>
+
+<p class="emoji"><a href="../index.html">🐯</a></p>
+
+<article class="piece">
+
+  <h1 class="piece-title"><em>For B. Esperanza</em></h1>
+
+  <div class="piece-body">
+
+    <section class="stanza" tabindex="0">
+      <p class="lines">Es previsible.</p>
+      <p class="translation">It's predictable.</p>
+    </section>
+
+    <section class="stanza" tabindex="0">
+      <p class="lines">Diario, la broca de estrella del martillo de afinación
+golpea un rítmo sobre tu espina cervical,
+y, por unos minutos, eres bailarín —
+móvil, sencillo, perfecto.</p>
+      <p class="translation">Each day, the tuning hammer's star-shaped tip bangs rhythmically on your cervical spine, and for several minutes you're a dancer — mobile, simple, perfect.</p>
+    </section>
+
+    <section class="stanza" tabindex="0">
+      <p class="lines">Bendita sea la precisión de manos pequeñas
+fijando kitten heels en lodo.</p>
+      <p class="translation">Bless the precision of small hands affixing kitten heels in mud.</p>
+    </section>
+
+    <section class="stanza" tabindex="0">
+      <p class="lines">Bendita sea el aliento tonificante,
+arrastrando trenzas de vapor de motor.</p>
+      <p class="translation">Bless the rib brace breath, trailing braids of engine steam.</p>
+    </section>
+
+    <section class="stanza" tabindex="0">
+      <p class="lines">Aguanta.</p>
+      <p class="translation">Hold tight.</p>
+    </section>
+
+    <section class="stanza" tabindex="0">
+      <p class="lines">Agarra firme el guante de cuero del conductor
+la pelota dura poliamida de la palanca de freno,
+impulsando hacia atras, mientras tanto,</p>
+      <p class="translation">The conductor's leather glove grips the hard polyamide ball of the brake lever, thrusting back as</p>
+    </section>
+
+    <section class="stanza" tabindex="0">
+      <p class="lines">250 tonaladas de acero
+llegan a una pausa culminante.</p>
+      <p class="translation">250 tons of steel are forced to a climactic stall.</p>
+    </section>
+
+    <section class="stanza" tabindex="0">
+      <p class="lines">Escuchen, ahora,
+al zumbido monótono de
+ladrillos pintados que
+flanquean la pista.</p>
+      <p class="translation">Listen, now, to the humdrum drone of painted bricks that flank the track.</p>
+    </section>
+
+    <section class="stanza" tabindex="0">
+      <p class="lines">Entienda.</p>
+      <p class="translation">Know this.</p>
+    </section>
+
+    <section class="stanza" tabindex="0">
+      <p class="lines">Existe
+aquí y, también, ahora
+un exceso
+de apertura.</p>
+      <p class="translation">There exists, here and now, an excess of opening.</p>
+    </section>
+
+    <section class="stanza" tabindex="0">
+      <p class="lines">Cierre signifíca discernimiento.
+La imágen se procede a sí misma.
+En la discoteca maqueta, con sus paredes de cartón,
+contar clicks es trabajo de mujer.</p>
+      <p class="translation">Closure means discernment. The image precedes itself. In the maquette club, its cardboard walls, counting clicks is women's work.</p>
+    </section>
+
+  </div>
+
+  <footer class="piece-footer">
+    <p><a href="../index.html">← index</a></p>
+    <!-- filler — link to whatever comes next, or delete this line -->
+    <p class="next"><a href="#">next: [title] →</a></p>
+  </footer>
+
+</article>
+
+<span id="floater" hidden aria-hidden="true"></span>
+
+<script src="../scripts.js"></script>
+</body>
+</html>
