@@ -67,6 +67,39 @@ footer { margin-top: 24px; }
 #floater[hidden] { display: none; }
 
 
+/* ---------------------------------------------------------
+   Text pieces — poems, fiction, essays
+   --------------------------------------------------------- */
+
+.piece { max-width: 560px; }
+
+.piece-title {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 0 0 28px;
+}
+
+.piece-body section { margin-bottom: 28px; }
+
+/* preserves line breaks as typed — for poem-style lines.
+   for essay paragraphs, use plain <p> tags instead. */
+.lines {
+  white-space: pre-line;
+  margin: 0;
+}
+
+.piece-footer {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+.piece-footer p { margin: 0 0 6px; }
+.piece-footer .next { color: #888; }
+.piece-footer .next a { color: inherit; }
+
+
 /* --------------------------------------------------------- */
 
 @media (max-width: 640px) {
