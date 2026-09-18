@@ -203,15 +203,42 @@
     el.style.transform = "translate(" + x + "px," + y + "px)";
   }
 
+  // 1 in 20 hovers leaves its emoji behind permanently, at the spot
+  // it appeared, instead of disappearing on unhover. Clears on refresh.
+  var STICKY_CHANCE = 0.05;
+  var stickyPending = false;
+
+  function leaveStuckCopy() {
+    var stuck = document.createElement("span");
+    stuck.textContent = el.textContent;
+    stuck.setAttribute("aria-hidden", "true");
+    var style = stuck.style;
+    style.position = "fixed";
+    style.top = "0";
+    style.left = "0";
+    style.transform = el.style.transform;
+    style.fontSize = window.getComputedStyle(el).fontSize;
+    style.lineHeight = "1";
+    style.pointerEvents = "none";
+    style.userSelect = "none";
+    style.zIndex = "998";
+    document.body.appendChild(stuck);
+  }
+
   function show(e) {
     current = e.currentTarget;
     el.textContent = EMOJI[Math.floor(Math.random() * EMOJI.length)];
     place();
     el.hidden = false;
+    stickyPending = Math.random() < STICKY_CHANCE;
   }
 
   function hide(e) {
     if (current === e.currentTarget) {
+      if (stickyPending) {
+        leaveStuckCopy();
+        stickyPending = false;
+      }
       current = null;
       el.hidden = true;
     }
