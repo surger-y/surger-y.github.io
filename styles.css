@@ -11,7 +11,7 @@ body {
   background: #fff;
   color: #000;
   font-family: "Times New Roman", Times, serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.45;
   -webkit-text-size-adjust: 100%;
 }
@@ -57,7 +57,7 @@ footer { margin-top: 24px; }
   position: fixed;
   top: 0;
   left: 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -76,7 +76,7 @@ footer { margin-top: 24px; }
 .piece-title {
   font-style: italic;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.45;
   margin: 0 0 28px;
 }
@@ -87,7 +87,7 @@ footer { margin-top: 24px; }
    for essay paragraphs, use plain <p> tags instead. */
 .lines {
   white-space: pre-line;
-  margin: 0;
+  margin: 0 0 0 10vw;
 }
 
 .piece-footer {
