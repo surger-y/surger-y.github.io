@@ -1,0 +1,76 @@
+/* ---------------------------------------------------------
+   nervous.works
+   Links are intentionally unstyled — browser defaults.
+   --------------------------------------------------------- */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 40px 24px 96px;
+  background: #fff;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-text-size-adjust: 100%;
+}
+
+p  { margin: 0 0 11px; }
+ul { list-style: none; margin: 0 0 28px; padding: 0; }
+
+
+/* ---------------------------------------------------------
+   Layout — header across the top, three sections side by side
+   --------------------------------------------------------- */
+
+.wrap { max-width: 760px; }
+
+main {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+}
+main section { flex: 1 1 0; }
+main ul { margin-bottom: 0; }
+
+
+/* ---------------------------------------------------------
+   Header
+   --------------------------------------------------------- */
+
+.emoji { margin-bottom: 18px; }
+.emoji a { text-decoration: none; }
+
+.bio { max-width: 380px; }
+
+.contact { margin-bottom: 36px; }
+
+footer { margin-top: 24px; }
+
+
+/* ---------------------------------------------------------
+   The one interaction
+   --------------------------------------------------------- */
+
+#floater {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 999;
+  will-change: transform;
+}
+#floater[hidden] { display: none; }
+
+
+/* --------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  body { padding: 28px 20px 64px; }
+  main { display: block; }
+  main ul { margin-bottom: 28px; }
+}
