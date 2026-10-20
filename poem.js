@@ -107,7 +107,6 @@
   "A kindle for reading you will use calibre to side load books onto the kindle so you do not support Amazon.",
   "Lie back and think of Surgery.",
   "You cant beat that with a stick.",
-  "When Australia send its people their not sending their best",
   "If all day you're told what to do, you might find fantasy in giving instruction.",
   "For example, picture a never ending ledger floating on the back of your eyelids.",
   "I'm thinking about buying a bike.",
