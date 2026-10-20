@@ -63,6 +63,10 @@ footer { margin-top: 24px; }
   margin: 0 0 28px;
 }
 
+/* a line under the title saying where the piece was read or shown;
+   pulled up a little so it sits close to the title */
+.piece-description { margin: -10px 0 28px; }
+
 .piece-body section { margin-bottom: 28px; }
 
 /* preserves line breaks as typed — for poem-style lines.
