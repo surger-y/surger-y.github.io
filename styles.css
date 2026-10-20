@@ -50,24 +50,6 @@ footer { margin-top: 24px; }
 
 
 /* ---------------------------------------------------------
-   The one interaction
-   --------------------------------------------------------- */
-
-#floater {
-  position: fixed;
-  top: 0;
-  left: 0;
-  font-size: 15px;
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-  z-index: 999;
-  will-change: transform;
-}
-#floater[hidden] { display: none; }
-
-
-/* ---------------------------------------------------------
    Text pieces — poems, fiction, essays
    --------------------------------------------------------- */
 
@@ -90,6 +72,10 @@ footer { margin-top: 24px; }
   margin: 0 0 0 10vw;
 }
 
+/* a second-language block placed below the first (e.g. an English
+   version under the Spanish original) */
+.translation { margin-top: 56px; }
+
 .piece-footer {
   margin-top: 40px;
   padding-top: 16px;
@@ -100,10 +86,65 @@ footer { margin-top: 24px; }
 .piece-footer .next a { color: inherit; }
 
 
+/* ---------------------------------------------------------
+   Project pages — description, then a horizontal strip of images.
+
+   Each <figure> holds an <img> and an optional <figcaption>.
+   Delete the <figcaption> for an image with no caption.
+   The caption is held to the width of its image.
+   --------------------------------------------------------- */
+
+.project { max-width: 560px; }
+
+.project-title {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.45;
+  margin: 0 0 18px;
+}
+
+.project-description { margin-bottom: 36px; }
+
+/* the strip runs the full width of the window, not the text column */
+.strip {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  overflow-x: auto;
+  margin: 0 -24px;
+  padding: 0 24px 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.strip figure {
+  display: table;          /* lets the caption take the image's width */
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.strip img {
+  display: block;
+  height: 70vh;
+  max-height: 560px;
+  width: auto;
+}
+
+.strip figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  padding-top: 6px;
+  color: #888;
+}
+
+
 /* --------------------------------------------------------- */
 
 @media (max-width: 640px) {
   body { padding: 28px 20px 64px; }
   main { display: block; }
   main ul { margin-bottom: 28px; }
+
+  .strip { margin: 0 -20px; padding: 0 20px 12px; }
+  .strip img { height: 50vh; }
 }
