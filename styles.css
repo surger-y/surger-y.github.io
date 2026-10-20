@@ -1,20 +1,25 @@
 /* ---------------------------------------------------------
    nervous.works
-   Links are intentionally unstyled — browser defaults.
+   All text, links included, is one blue. Links keep the
+   browser's underline; the colour does not change when visited.
    --------------------------------------------------------- */
 
 * { box-sizing: border-box; }
+
+:root { --blue: #2071ff; }
 
 body {
   margin: 0;
   padding: 40px 24px 96px;
   background: #fff;
-  color: #000;
+  color: var(--blue);
   font-family: "Times New Roman", Times, serif;
   font-size: 15px;
   line-height: 1.45;
   -webkit-text-size-adjust: 100%;
 }
+
+a, a:visited, a:hover, a:active { color: var(--blue); }
 
 p  { margin: 0 0 11px; }
 ul { list-style: none; margin: 0 0 28px; padding: 0; }
@@ -87,8 +92,7 @@ footer { margin-top: 24px; }
   border-top: 1px solid #ddd;
 }
 .piece-footer p { margin: 0 0 6px; }
-.piece-footer .next { color: #888; }
-.piece-footer .next a { color: inherit; }
+.piece-footer .next { color: var(--blue); }
 
 
 /* ---------------------------------------------------------
@@ -149,7 +153,7 @@ footer { margin-top: 24px; }
   display: table-caption;
   caption-side: bottom;
   padding-top: 6px;
-  color: #888;
+  color: var(--blue);
 }
 
 
@@ -261,6 +265,42 @@ footer { margin-top: 24px; }
   font: 36px/1 "Times New Roman", Times, serif;
   cursor: pointer;
 }
+
+
+/* ---------------------------------------------------------
+   Home page poem — set large behind the content (see poem.js)
+   --------------------------------------------------------- */
+
+.home { position: relative; min-height: 100vh; }
+.home .wrap { position: relative; z-index: 1; pointer-events: none; }   /* clicks fall through the empty parts to the poem */
+.home .wrap a { pointer-events: auto; }
+
+#poem {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  text-decoration: none;
+  pointer-events: none;
+}
+.poem-word {
+  position: absolute;
+  white-space: nowrap;
+  line-height: 1;
+  height: 1em;
+  letter-spacing: -0.012em;
+  cursor: pointer;
+  pointer-events: auto;
+}
+#poem-measure {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  visibility: hidden;
+  white-space: nowrap;
+}
+#poem-measure .poem-word { position: static; display: inline-block; height: auto; }
 
 
 /* --------------------------------------------------------- */
