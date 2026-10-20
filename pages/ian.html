@@ -16,25 +16,42 @@
   <h1 class="project-title">Impossibly Awesome Nothing</h1>
 
   <div class="project-description">
-    <p>Project description goes here. One or two paragraphs.</p>
+    <p>Randomized ledger of text image posted to Impossibly Awesome Nothing <a href="https://www.instagram.com/impossibly.awesome.nothing/" target="_blank" rel="noopener">instagram</a> account (2022-2026)</p>
   </div>
 
 </div>
 
-<div class="strip">
+<!-- A grid of small squares; click one to enlarge it (see lightbox.js).
+     Each <li> is one post: thumbnail in images/ian/thumbs/, large version in
+     images/ian/full/. The order is shuffled on every visit by the script
+     below the grid; delete that script to keep the order as written here. -->
+<ul class="grid" id="ledger">
+    <li><button type="button" data-full="../images/ian/full/001.jpg"><img src="../images/ian/thumbs/001.jpg" alt="Fortune-cookie fortunes in white type over a blurred photo of slips of paper: &quot;You will be able to improve your work-life balance. A new passion will ignite your creativity. For everything, there is a reason. Dreamers are the creators of their own realities. Be open to the unexpected, and you&#x27;ll find inspiration.&quot;" width="240" height="240" loading="lazy"></button></li>
+    <li><button type="button" data-full="../images/ian/full/002.jpg"><img src="../images/ian/thumbs/002.jpg" alt="Photograph at dusk: plaster hands holding a phone, handcuffed, reaching out of a white board in a wooden frame" width="240" height="240" loading="lazy"></button></li>
+    <li><button type="button" data-full="../images/ian/full/003.jpg"><img src="../images/ian/thumbs/003.jpg" alt="Text image: &quot;LiDAR weapon. Everything is more believable the second time. Spring is a folded crane. Shipwreck is an adverb. Functor is an action. Agnes Martin collapses tomorrow. It is true when you speak it. It is not a shopping list when you own everything. Deform memory object to taste. Turn away from objects of no discernible form. The LiDAR weapon doesn&#x27;t make a sound.&quot;" width="240" height="240" loading="lazy"></button></li>
+    <li><button type="button" data-full="../images/ian/full/004.jpg"><img src="../images/ian/thumbs/004.jpg" alt="Text image: &quot;Progressive Overload&quot; in grey serif type on cyan" width="240" height="240" loading="lazy"></button></li>
+    <li><button type="button" data-full="../images/ian/full/005.jpg"><img src="../images/ian/thumbs/005.jpg" alt="Text image: &quot;You must accept that those private beauties which you hold so close will be seized and sold before your very eyes.&quot; above three blue circles" width="240" height="240" loading="lazy"></button></li>
+    <li><button type="button" data-full="../images/ian/full/006.jpg"><img src="../images/ian/thumbs/006.jpg" alt="Blue organ stop labels scattered on grey: Piccolo, Oboe and Bassoon 8ft, Cornet 3ft, Fugara 4ft, Boehm Flute 4ft, Aeolina, Salicional, Open Diapason, Bourdon Treble 16ft, Bourdon Bass 16ft, Tremulant" width="240" height="240" loading="lazy"></button></li>
+    <li><button type="button" data-full="../images/ian/full/007.jpg"><img src="../images/ian/thumbs/007.jpg" alt="Blue organ stop labels scattered on grey: Great, Trumpet 8ft, Fifteenth 2ft, Twelfth 3ft, Principal 4ft, Flute Harmonic 4ft, Dulciana, Viol di Camba, Doppel Flute, Open Diapason, Bourdon 16ft, Bellows" width="240" height="240" loading="lazy"></button></li>
+    <li><button type="button" data-full="../images/ian/full/008.jpg"><img src="../images/ian/thumbs/008.jpg" alt="Text image: &quot;Lie back and think of Surgery.&quot; around a pale blue icon of a figure lying beneath a surgical lamp" width="240" height="240" loading="lazy"></button></li>
+    <li><button type="button" data-full="../images/ian/full/009.jpg"><img src="../images/ian/thumbs/009.jpg" alt="Text image: &quot;I took a screenshot of the whole world&quot; in black serif type" width="240" height="240" loading="lazy"></button></li>
+    <li><button type="button" data-full="../images/ian/full/010.jpg"><img src="../images/ian/thumbs/010.jpg" alt="Text image: &quot;Unfortunately, I already sold that poem.&quot; in blue on pale grey" width="240" height="240" loading="lazy"></button></li>
+    <li><button type="button" data-full="../images/ian/full/011.jpg"><img src="../images/ian/thumbs/011.jpg" alt="Text image: &quot;Working on my novel: Goodbye Instagram, Hello 2026&quot; with tiger emoji" width="240" height="240" loading="lazy"></button></li>
+    <li><button type="button" data-full="../images/ian/full/012.jpg"><img src="../images/ian/thumbs/012.jpg" alt="A grain of rice with blue text across it: &quot;Peace, Love, Unity, and Respect&quot;" width="240" height="240" loading="lazy"></button></li>
+</ul>
 
-  <!--
-  <figure>
-    <button type="button" data-full="../images/ian/full/01.jpg"><img src="../images/ian/strip/01.jpg" alt="Describe the image"></button>
-    <figcaption>Caption goes here.</figcaption>
-  </figure>
-
-  <figure>
-    <button type="button" data-full="../images/ian/full/02.jpg"><img src="../images/ian/strip/02.jpg" alt="Describe the image"></button>
-  </figure>
-  -->
-
-</div>
+<script>
+(function () {
+  var grid = document.getElementById("ledger");
+  if (!grid) return;
+  var items = Array.prototype.slice.call(grid.children);
+  for (var i = items.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = items[i]; items[i] = items[j]; items[j] = t;
+  }
+  items.forEach(function (li) { grid.appendChild(li); });
+})();
+</script>
 
 <script src="../lightbox.js"></script>
 

@@ -149,6 +149,33 @@ footer { margin-top: 24px; }
 
 
 /* ---------------------------------------------------------
+   Impossibly Awesome Nothing — a grid of small squares.
+   As many columns as fit (about 20 on a laptop, fewer on a phone).
+   --------------------------------------------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.grid li { margin: 0; }
+.grid button {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #f3f3f3;
+  cursor: zoom-in;
+}
+.grid img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+
+/* ---------------------------------------------------------
    Party Flyers — flyers dropped on a table.
 
    Positions are set per flyer in the HTML (--x, --y, --r, --z), in

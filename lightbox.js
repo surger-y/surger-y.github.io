@@ -1,5 +1,5 @@
 /* Click an image to see it large over the page.
-   Works on any <button> inside a .strip (project pages) and on .flyer
+   Works on any <button> inside a .strip or .grid (project pages) and on .flyer
    buttons (Party Flyers). The large version is the button's data-full
    attribute if it has one, otherwise the image inside it.
    A link with a data-video attribute (<a href="video.mp4" data-video>)
@@ -61,7 +61,7 @@
     if (opener) opener.focus();
   }
 
-  var items = document.querySelectorAll(".strip button, .flyer");
+  var items = document.querySelectorAll(".strip button, .grid button, .flyer");
   for (var i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () { open(this); });
   }
