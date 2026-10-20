@@ -74,7 +74,7 @@ footer { margin-top: 24px; }
 
 /* a second-language block placed below the first (e.g. an English
    version under the Spanish original) */
-.translation { margin-top: 56px; }
+.translation { margin-top: 120px; }
 
 .piece-footer {
   margin-top: 40px;
@@ -138,6 +138,80 @@ footer { margin-top: 24px; }
 }
 
 
+/* ---------------------------------------------------------
+   Party Flyers — flyers dropped on a table.
+
+   Positions are set per flyer in the HTML (--x, --y, --r, --z), in
+   units of 1% of the table's width, so the pile scales with the window.
+   --------------------------------------------------------- */
+
+.table {
+  container-type: inline-size;
+  max-width: 1200px;
+}
+
+.spread {
+  position: relative;
+  height: 74cqw;
+}
+
+.flyer {
+  position: absolute;
+  left: calc(var(--x) * 1cqw);
+  top: calc(var(--y) * 1cqw);
+  width: 21cqw;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #fff;
+  cursor: pointer;
+  z-index: var(--z);
+  transform: rotate(var(--r));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.flyer img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.flyer:hover,
+.flyer:focus-visible {
+  transform: rotate(var(--r)) scale(1.06);
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+/* the overlay: dimmed, so the pile still shows behind the open flyer */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+}
+.lightbox[hidden] { display: none; }
+
+.lightbox img {
+  display: block;
+  max-width: 92vw;
+  max-height: 90vh;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  padding: 0 6px;
+  border: 0;
+  background: none;
+  color: #fff;
+  font: 36px/1 "Times New Roman", Times, serif;
+  cursor: pointer;
+}
+
+
 /* --------------------------------------------------------- */
 
 @media (max-width: 640px) {
@@ -147,4 +221,7 @@ footer { margin-top: 24px; }
 
   .strip { margin: 0 -20px; padding: 0 20px 12px; }
   .strip img { height: 50vh; }
+
+  .spread { height: 196cqw; }
+  .flyer { left: calc(var(--mx) * 1cqw); top: calc(var(--my) * 1cqw); width: 38cqw; }
 }

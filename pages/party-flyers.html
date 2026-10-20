@@ -21,16 +21,72 @@
 
 </div>
 
-<div class="strip">
-
-  <!--
-  <figure>
-    <img src="../images/party-flyers/01.jpg" alt="Describe the image">
-    <figcaption>Caption goes here.</figcaption>
-  </figure>
-  -->
-
+<!-- The flyers, dropped on a table. Each button is one flyer.
+     --x / --y   position on desktop (units are 1% of the table's width)
+     --mx / --my position on phones
+     --r         tilt
+     --z         stacking order (higher sits on top)
+     To add a flyer: copy a button, point data-full at the big image and
+     src at the thumbnail, and give it a position. -->
+<div class="table">
+  <div class="spread">
+    <button class="flyer" style="--x:1.8;--y:3.3;--mx:2.3;--my:1.8;--r:-4.8deg;--z:9" data-full="../images/party-flyers/full/hysteria.jpg" data-alt="Hysteria flyer: Female presents, Bossa Nova Civic Club"><img src="../images/party-flyers/thumbs/hysteria.jpg" alt="Hysteria flyer: Female presents, Bossa Nova Civic Club" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:19.9;--y:3.6;--mx:30.1;--my:1.7;--r:-3.9deg;--z:13" data-full="../images/party-flyers/full/tower-yellow.jpg" data-alt="Tower flyer on yellow strapped fabric"><img src="../images/party-flyers/thumbs/tower-yellow.jpg" alt="Tower flyer on yellow strapped fabric" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:40.1;--y:3.7;--mx:61.3;--my:1.4;--r:9.5deg;--z:10" data-full="../images/party-flyers/full/life-of-pink.jpg" data-alt="Life Of flyer, pink, badgalquirit and Meilgaarden"><img src="../images/party-flyers/thumbs/life-of-pink.jpg" alt="Life Of flyer, pink, badgalquirit and Meilgaarden" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:57.6;--y:3.6;--mx:2.0;--my:34.4;--r:-4.9deg;--z:4" data-full="../images/party-flyers/full/kismet-bossa.jpg" data-alt="Kismet flyer, Bossa, Serpentskirt, distorted black type"><img src="../images/party-flyers/thumbs/kismet-bossa.jpg" alt="Kismet flyer, Bossa, Serpentskirt, distorted black type" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:76.4;--y:4.4;--mx:30.5;--my:37.5;--r:-8.2deg;--z:11" data-full="../images/party-flyers/full/surgery-skrenky-sense.jpg" data-alt="Rainbow caterpillar flyer, Surgery and Skrenky Sense"><img src="../images/party-flyers/thumbs/surgery-skrenky-sense.jpg" alt="Rainbow caterpillar flyer, Surgery and Skrenky Sense" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:1.2;--y:19.0;--mx:59.8;--my:37.9;--r:13.0deg;--z:10" data-full="../images/party-flyers/full/tower-metal.jpg" data-alt="Tower flyer on scratched metal"><img src="../images/party-flyers/thumbs/tower-metal.jpg" alt="Tower flyer on scratched metal" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:18.3;--y:20.3;--mx:1.8;--my:72.1;--r:-3.7deg;--z:13" data-full="../images/party-flyers/full/320-q3.jpg" data-alt="320 Q3 schedule on glitched green"><img src="../images/party-flyers/thumbs/320-q3.jpg" alt="320 Q3 schedule on glitched green" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:36.9;--y:19.5;--mx:30.4;--my:69.4;--r:-11.5deg;--z:12" data-full="../images/party-flyers/full/life-of-gothic.jpg" data-alt="Life Of flyer in blackletter with illuminated border"><img src="../images/party-flyers/thumbs/life-of-gothic.jpg" alt="Life Of flyer in blackletter with illuminated border" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:55.9;--y:23.6;--mx:59.7;--my:71.3;--r:7.2deg;--z:10" data-full="../images/party-flyers/full/nina-mui-mui.jpg" data-alt="Nina, Mui Mui, Serpentskirt flyer with red star"><img src="../images/party-flyers/thumbs/nina-mui-mui.jpg" alt="Nina, Mui Mui, Serpentskirt flyer with red star" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:76.5;--y:22.9;--mx:0.3;--my:104.5;--r:3.2deg;--z:7" data-full="../images/party-flyers/full/stride-breaker.jpg" data-alt="Stride Breaker flyer at Kwia"><img src="../images/party-flyers/thumbs/stride-breaker.jpg" alt="Stride Breaker flyer at Kwia" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:3.0;--y:38.1;--mx:30.2;--my:104.6;--r:-7.6deg;--z:8" data-full="../images/party-flyers/full/tower-insulation.jpg" data-alt="Tower flyer on pink insulation"><img src="../images/party-flyers/thumbs/tower-insulation.jpg" alt="Tower flyer on pink insulation" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:18.7;--y:40.3;--mx:60.8;--my:105.1;--r:-7.2deg;--z:7" data-full="../images/party-flyers/full/kismet-kindred.jpg" data-alt="Kismet flyer with pastel letter circles"><img src="../images/party-flyers/thumbs/kismet-kindred.jpg" alt="Kismet flyer with pastel letter circles" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:37.0;--y:39.6;--mx:0.1;--my:140.6;--r:13.0deg;--z:1" data-full="../images/party-flyers/full/life-of-lavender.jpg" data-alt="Life Of flyer, lavender, rotated type"><img src="../images/party-flyers/thumbs/life-of-lavender.jpg" alt="Life Of flyer, lavender, rotated type" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:55.8;--y:39.5;--mx:32.1;--my:142.9;--r:-3.4deg;--z:3" data-full="../images/party-flyers/full/bindy-mercury-lounge.jpg" data-alt="Bindy live at the Mercury Lounge, hand-drawn flyer"><img src="../images/party-flyers/thumbs/bindy-mercury-lounge.jpg" alt="Bindy live at the Mercury Lounge, hand-drawn flyer" width="640" height="800" loading="lazy"></button>
+    <button class="flyer" style="--x:74.9;--y:38.8;--mx:61.8;--my:141.0;--r:6.9deg;--z:2" data-full="../images/party-flyers/full/tower-pipes.jpg" data-alt="Tower flyer on stacked white pipes"><img src="../images/party-flyers/thumbs/tower-pipes.jpg" alt="Tower flyer on stacked white pipes" width="640" height="800" loading="lazy"></button>
+  </div>
 </div>
+
+<!-- Click a flyer to open it over the table; x, Esc, or a click outside closes it. -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Flyer" hidden>
+  <button class="lightbox-close" type="button" aria-label="Close">×</button>
+  <img src="" alt="">
+</div>
+
+<script>
+(function () {
+  var box = document.getElementById("lightbox");
+  var img = box.querySelector("img");
+  var closeBtn = box.querySelector(".lightbox-close");
+  var opener = null;
+
+  function open(btn) {
+    opener = btn;
+    img.src = btn.getAttribute("data-full");
+    img.alt = btn.getAttribute("data-alt") || "";
+    box.hidden = false;
+    closeBtn.focus();
+  }
+
+  function close() {
+    box.hidden = true;
+    img.removeAttribute("src");
+    if (opener) opener.focus();
+  }
+
+  var flyers = document.querySelectorAll(".flyer");
+  for (var i = 0; i < flyers.length; i++) {
+    flyers[i].addEventListener("click", function () { open(this); });
+  }
+
+  closeBtn.addEventListener("click", close);
+  box.addEventListener("click", function (e) { if (e.target === box) close(); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !box.hidden) close();
+  });
+})();
+</script>
 
 </body>
 </html>
