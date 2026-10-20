@@ -48,45 +48,8 @@
   </div>
 </div>
 
-<!-- Click a flyer to open it over the table; x, Esc, or a click outside closes it. -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Flyer" hidden>
-  <button class="lightbox-close" type="button" aria-label="Close">×</button>
-  <img src="" alt="">
-</div>
-
-<script>
-(function () {
-  var box = document.getElementById("lightbox");
-  var img = box.querySelector("img");
-  var closeBtn = box.querySelector(".lightbox-close");
-  var opener = null;
-
-  function open(btn) {
-    opener = btn;
-    img.src = btn.getAttribute("data-full");
-    img.alt = btn.getAttribute("data-alt") || "";
-    box.hidden = false;
-    closeBtn.focus();
-  }
-
-  function close() {
-    box.hidden = true;
-    img.removeAttribute("src");
-    if (opener) opener.focus();
-  }
-
-  var flyers = document.querySelectorAll(".flyer");
-  for (var i = 0; i < flyers.length; i++) {
-    flyers[i].addEventListener("click", function () { open(this); });
-  }
-
-  closeBtn.addEventListener("click", close);
-  box.addEventListener("click", function (e) { if (e.target === box) close(); });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && !box.hidden) close();
-  });
-})();
-</script>
+<!-- Click a flyer to open it over the table (see lightbox.js). -->
+<script src="../lightbox.js"></script>
 
 </body>
 </html>

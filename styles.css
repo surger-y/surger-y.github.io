@@ -89,7 +89,8 @@ footer { margin-top: 24px; }
 /* ---------------------------------------------------------
    Project pages — description, then a horizontal strip of images.
 
-   Each <figure> holds an <img> and an optional <figcaption>.
+   Each <figure> holds a <button> around an <img> (click to enlarge)
+   and an optional <figcaption>.
    Delete the <figcaption> for an image with no caption.
    The caption is held to the width of its image.
    --------------------------------------------------------- */
@@ -121,6 +122,15 @@ footer { margin-top: 24px; }
   display: table;          /* lets the caption take the image's width */
   flex: 0 0 auto;
   margin: 0;
+}
+
+.strip button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
 }
 
 .strip img {

@@ -21,24 +21,28 @@
 
 </div>
 
-<!-- Horizontal scroll of images.
+<!-- Horizontal scroll of images. Click an image to enlarge it.
      Copy a whole <figure> block for each image.
      Captions are optional: delete the <figcaption> line to leave one off.
-     Put image files in /images/<project-name>/ -->
+     Put image files in /images/<project-name>/ (small version in strip/,
+     large version in full/). If an image has no separate large version,
+     leave off data-full and the strip image itself is shown. -->
 <div class="strip">
 
   <!--
   <figure>
-    <img src="../images/project-name/01.jpg" alt="Describe the image">
+    <button type="button" data-full="../images/project-name/full/01.jpg"><img src="../images/project-name/strip/01.jpg" alt="Describe the image"></button>
     <figcaption>Caption goes here.</figcaption>
   </figure>
 
   <figure>
-    <img src="../images/project-name/02.jpg" alt="Describe the image">
+    <button type="button" data-full="../images/project-name/full/02.jpg"><img src="../images/project-name/strip/02.jpg" alt="Describe the image"></button>
   </figure>
   -->
 
 </div>
+
+<script src="../lightbox.js"></script>
 
 </body>
 </html>
