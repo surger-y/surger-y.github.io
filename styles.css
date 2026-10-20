@@ -140,6 +140,10 @@ footer { margin-top: 24px; }
   width: auto;
 }
 
+/* cut-out images (transparent background): a faint shadow keeps white objects
+   from disappearing into the white page */
+.strip img.cutout { filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15)); }
+
 .strip figcaption {
   display: table-caption;
   caption-side: bottom;
