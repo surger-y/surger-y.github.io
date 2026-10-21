@@ -149,8 +149,6 @@
   "Impossibly awesome nothing is now a website you can visit at impossiblyaweso.me Right now the site can only display text.",
   "Let me know if you would like to also see images, and I can work to add this feature.",
   "I would also like to have a feature For user submitted poems Thats all for now, Thank you as always!",
-  "\"You know what that is?\" he asked, pushing me against the glass enclosure of the bus stop.",
-  "But my mental equilibrium had been shattered, Out on the street, I felt vertiginous, only half there.",
   "Tomorrow we will have 80 degrees This line you may use to take a breath.",
   "Rules do not relate to kindness nor grace, nor are you in trouble.",
   "God forbid you give yourself some structure.",
