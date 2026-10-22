@@ -303,6 +303,22 @@ footer { margin-top: 24px; }
 #poem-measure .poem-word { position: static; display: inline-block; height: auto; }
 
 
+/* ---------------------------------------------------------
+   Collage poems — overlapping screenshots placed by percentage
+   (see macular-degeneration.html). Wider than the text column
+   so the type stays readable.
+   --------------------------------------------------------- */
+
+.collage {
+  position: relative;
+  width: min(100%, 1200px);
+  aspect-ratio: 5984 / 8000;
+  overflow: hidden;
+  margin: 0 0 28px;
+}
+.collage img { position: absolute; display: block; height: auto; }
+
+
 /* --------------------------------------------------------- */
 
 @media (max-width: 640px) {
